@@ -1,0 +1,1 @@
+"""Virality model training package."""

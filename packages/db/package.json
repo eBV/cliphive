@@ -1,0 +1,26 @@
+{
+  "name": "@cliphive/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx src/seed.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cliphive/shared": "workspace:*",
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.32.2",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.23.2",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  }
+}

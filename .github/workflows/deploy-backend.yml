@@ -1,0 +1,43 @@
+name: Deploy — Backend (Railway)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/server/**"
+      - "packages/shared/**"
+      - "packages/db/**"
+
+concurrency:
+  group: deploy-backend
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy Server to Railway
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build server
+        run: npm run build --workspace=apps/server
+
+      - name: Run DB migrations (production)
+        run: npm run db:migrate --workspace=packages/db
+        env:
+          DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+
+      - name: Deploy to Railway
+        uses: bervProject/railway-deploy@v1
+        with:
+          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+          service: cliphive-server

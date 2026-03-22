@@ -1,0 +1,101 @@
+# FastAPI & ASGI
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# Pydantic
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# OpenAI
+openai==1.30.1
+
+# Whisper (OpenAI)
+openai-whisper==20231117
+
+# Scene Detection
+scenedetect[opencv]==0.6.4
+
+# MediaPipe
+mediapipe==0.10.14
+
+# PyTorch (CUDA 12.1)
+torch==2.3.0
+torchvision==0.18.0
+torchaudio==2.3.0
+
+# Audio processing
+librosa==0.10.2
+soundfile==0.12.1
+audioread==3.0.1
+
+# Essentia (optional, fallback to librosa if unavailable)
+# essentia==2.1b6.dev1110  # Install separately via pip if available
+
+# Scientific computing
+numpy==1.26.4
+scipy==1.13.0
+
+# Computer Vision
+opencv-python==4.9.0.80
+Pillow==10.3.0
+
+# Diffusers / Transformers
+diffusers==0.27.2
+transformers==4.41.0
+accelerate==0.30.1
+safetensors==0.4.3
+tokenizers==0.19.1
+
+# AWS
+boto3==1.34.110
+botocore==1.34.110
+
+# HTTP
+httpx==0.27.0
+aiohttp==3.9.5
+aiofiles==23.2.1
+
+# Retry logic
+tenacity==8.3.0
+
+# Logging
+structlog==24.1.0
+colorama==0.4.6
+
+# Metrics / Monitoring
+prometheus-fastapi-instrumentator==7.0.0
+prometheus-client==0.20.0
+
+# Utilities
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+anyio==4.3.0
+click==8.1.7
+tqdm==4.66.4
+filelock==3.14.0
+packaging==24.0
+typing-extensions==4.11.0
+rich==13.7.1
+
+# YOLOv8
+ultralytics==8.2.18
+
+# CLIP embeddings
+ftfy==6.2.0
+regex==2024.5.15
+
+# W&B (optional, for training logging)
+wandb==0.17.0
+
+# MLflow (optional alternative)
+# mlflow==2.13.0
+
+# Modal (for serverless deployment)
+modal==0.62.230
+
+# Video processing helpers
+imageio==2.34.1
+imageio-ffmpeg==0.5.1
+moviepy==1.0.3
