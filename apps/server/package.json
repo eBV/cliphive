@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc --noEmit",
+    "lint": "eslint src --max-warnings=0",
     "start": "node --loader tsx/esm src/index.ts",
     "type-check": "tsc --noEmit",
     "test": "vitest run",

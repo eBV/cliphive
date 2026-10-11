@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "paths": {
+      "@cliphive/shared": [
+        "../shared/src/index.ts"
+      ],
+      "@cliphive/shared/*": [
+        "../shared/src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/migrations"
+  ],
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "src/**/*",
+    "drizzle.config.ts"
+  ]
+}
